@@ -9,6 +9,10 @@ import AnimatedText from './Animated';
 import ContactForm from './contactForm';
 import Footer from './footer';
 
+
+
+
+
 export default function Body() {
   // Function to handle CV download
   const handleDownloadCV = () => {
@@ -18,39 +22,41 @@ export default function Body() {
     document.body.appendChild(link); // Append link to body
     link.click(); // Simulate click to download
     document.body.removeChild(link); // Remove the link after download
-  };
+  }
 
   return (
+    
+    
     <div className="w-full h-full bg-[#6a7b76] relative">
-      <div className="flex flex-col p-8 min-h-screen relative z-10">
-        {/* Responsive heading */}
-        <div className="mb-2 md:w-1/2 text-left my-24">
-          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-black"><cite>Muhammad Ubaid Ali</cite></h1>
-        </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center p-5 md:p-7 lg:p-10 text-black">
+   
+  
+  <div className="space-y-4 text-center sm:text-left">
+    <h1 className="text-center text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-black mt-9"> {/* Add margin-bottom for the gap */}
+      <cite>Muhammad Ubaid Ali</cite>
+    </h1>
+    {/* Animated Text */}
+    <div className="text-center text-lg sm:text-xl md:text-3xl lg:text-3xl">
+      <cite><AnimatedText /></cite>
+    </div>
+    {/* Paragraph */}
+    <p className="text-center sm:text-lg md:text-xl lg:text-2xl leading-relaxed sm:leading-snug">
+      A graphic frontend web developer with a passion for blending design and technology.
+      <br /> I love turning creative ideas into clean, visually stunning websites that are easy to use and perform beautifully across all devices.
+      <br /> My skills range from designing eye-catching graphics to building responsive, user-friendly web interfaces with tools like HTML, CSS, JavaScript, React, and Next.js.
+    </p>
+  </div>
 
-        {/* Animated text */}
-        <div className=" text-1xl sm:text-xl md:text-3xl lg:text-3xl inline-block h-20 w-full overflow-hidden ">
-          <cite><AnimatedText /></cite>
-        </div>
-
-        {/* Responsive text with image */}
-        <div className="flex flex-col-reverse sm:flex-row items-center p-5 md:p-7 lg:p-10 text-black space-y-6 sm:space-y-0">
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-center sm:text-left leading-relaxed sm:leading-snug">
-            A graphic frontend web developer with a passion for blending design and technology.
-            <br /> I love turning creative ideas into clean, visually stunning websites that are easy to use and perform beautifully across all devices.
-            <br /> My skills range from designing eye-catching graphics to building responsive, user-friendly web interfaces with tools like HTML, CSS, JavaScript, React, and Next.js.
-            <br /> My goal is always the same: to create websites that not only look great but also provide an amazing experience for everyone who visits.
-          </p>
-          <div className="mb-4 sm:mb-0 sm:mr-3 flex justify-center sm:justify-end px-4 sm:px-0">
-            <Image
-              src={bodyPic}
-              alt="My Pic"
-              width={700}
-              height={700}
-              className="slide-in-bck-left rounded-full object-cover opacity-80 shadow-lg"
-            />
-          </div>
-        </div>
+  {/* Right Section: Round Image */}
+  <div className="flex justify-center sm:justify-end item-center">
+    <Image
+      src={bodyPic}
+      alt="My Pic"
+      width={350}
+      height={350}
+      className="slide-in-bck-left rounded-lg object-cover shadow-lg"
+    />
+  </div>
 
         {/* Download CV button */}
         <ul> 
@@ -69,7 +75,7 @@ export default function Body() {
       <div  id="about-me" className='about-me mb-10 p-10 text-left' >
         <h1 className="text-3xl font-bold mb-4 bg-gray-800 br-15 text-center rounded-lg text-white py-2 my-20">About Me</h1>
         <h3 className="text-2xl mb-4 mt- text-center mt-7">Web Developer | Frontend Developer</h3>
-        <p className="leading-relaxed px-4 mb-10 text-2xl mt-10">
+        <p className="leading-relaxed px-4 mb-10 text-2xl mt-10 font-">
           I'm really passionate about building intuitive and responsive front-end solutions. 
           With my skills in HTML, CSS, JavaScript, TypeScript, React, and Next.js, 
           I love turning design ideas into real, user-friendly experiences. 
