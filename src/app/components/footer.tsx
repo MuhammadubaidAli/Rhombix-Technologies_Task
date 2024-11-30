@@ -1,4 +1,3 @@
-// src/components/Footer.tsx
 import React from 'react';
 import GithubLogo from '../public/Github logo.png';
 
